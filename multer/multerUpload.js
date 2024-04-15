@@ -19,10 +19,7 @@ const salonPicUpload = multer({ storage: salonPicStorage });
 const servicePicStorage = multer.diskStorage({
   //path to store the profilePic
   destination: (req, file, cb) => {
-    cb(
-      null,
-      "D:/NodeJS/INFOLABZ_INTERNS/React Projects/react_salon_appointment/backend/images/servicePics"
-    );
+    cb(null, "../images/servicePics");
   },
 
   //filename to give to the profilePic

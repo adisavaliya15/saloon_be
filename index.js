@@ -46,7 +46,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "http://localhost:3002",
-      "https://saloon-be-5807.onrender.com",
+      "https://saloon.nimesh.engineer",
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -60,7 +60,8 @@ app.use(
     saveUninitialized: true,
   })
 );
-
+app.use("/images/salonPics", express.static("./images/salonPics"));
+app.use("/images/servicdPics", express.static("./images/servicdPics"));
 app.post("/register", SignUpApi);
 app.post("/login", LoginApi);
 app.get("/logout", Logout);
