@@ -4,7 +4,7 @@ const multer = require("multer");
 const salonPicStorage = multer.diskStorage({
   //path to store the profilePic
   destination: (req, file, cb) => {
-    cb(null, "./images/salonPics");
+    cb(null, "../images/salonPics");
   },
 
   //filename to give to the profilePic
@@ -19,7 +19,7 @@ const salonPicUpload = multer({ storage: salonPicStorage });
 const servicePicStorage = multer.diskStorage({
   //path to store the profilePic
   destination: (req, file, cb) => {
-    cb(null, "./images/servicePics");
+    cb(null, "../images/servicePics");
   },
 
   //filename to give to the profilePic
