@@ -35,7 +35,7 @@ const { ViewUserBookings } = require("./api/user/bookingHistory");
 require("dotenv").config();
 
 const app = express();
-const PORTS = 5001;
+const PORTS = 8001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -98,7 +98,7 @@ app.get("/viewSalon", ViewSalon);
 app.post("/viewServicesuser", ViewServices);
 app.post("/viewUserBookings", ViewUserBookings);
 
-app.listen(process.env.PORTS || PORTS, () => {
+app.listen(process.env.PORT || PORTS, () => {
   console.log(`Server is running on port ${PORTS}`);
 });
 
