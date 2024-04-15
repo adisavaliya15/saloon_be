@@ -61,7 +61,8 @@ app.use(
   })
 );
 app.use("/images/salonPics", express.static("./images/salonPics"));
-app.use("/images/servicdPics", express.static("./images/servicdPics"));
+app.use("/images/servicePics", express.static("./images/servicePics"));
+
 app.post("/register", SignUpApi);
 app.post("/login", LoginApi);
 app.get("/logout", Logout);
